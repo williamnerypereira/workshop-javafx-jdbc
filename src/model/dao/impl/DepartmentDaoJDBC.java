@@ -88,13 +88,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			
 			st.setInt(1, id);
 			
-			int rows = st.executeUpdate();
-			
-			if(rows == 0) {
-				System.out.println("Department not found");
-			} else {
-				System.out.println("Delete completed");
-			}
+			st.executeUpdate();
 			
 		} catch (SQLException e) {
 			
