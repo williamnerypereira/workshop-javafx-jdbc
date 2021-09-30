@@ -102,14 +102,7 @@ public class SellerDaoJDBC implements SellerDao {
 			
 			st.setInt(1, id);
 				
-			int rows = st.executeUpdate();
-			
-			if(rows == 0) {
-				//throw new DbException("Seller not found");
-				System.out.println("Seller not found");
-			} else {		
-				System.out.println("Delete completed");
-			}
+			st.executeUpdate();
 					
 		} catch (SQLException e) {
 			
